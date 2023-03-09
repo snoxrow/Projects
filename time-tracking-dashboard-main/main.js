@@ -17,10 +17,20 @@ let cardHours = document.querySelectorAll(".mid-section");
 let lastTimeframe = document.querySelectorAll(".bot-section");
 let background = document.querySelectorAll(".background-svg");
 let svg = document.querySelectorAll("svg");
-
-document.addEventListener("DOMContentLoaded", () => {
+function runOnStart() {
   timeFrame();
-});
+}
+if(document.readyState !== 'loading') {
+  runOnStart();
+}
+else {
+  document.addEventListener('DOMContentLoaded', function () {
+      runOnStart()
+  });
+}
+// // document.addEventListener("DOMContentLoaded", () => {
+// //   timeFrame();
+// });
 cardTitle.forEach(changeTitle);
 background.forEach(backgroundColor);
 // preventDefault(daily);
