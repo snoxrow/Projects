@@ -28,9 +28,8 @@ else {
       runOnStart()
   });
 }
-// // document.addEventListener("DOMContentLoaded", () => {
-// //   timeFrame();
-// });
+// document.addEventListener("DOMContentLoaded", () => {
+//   timeFrame();})
 cardTitle.forEach(changeTitle);
 background.forEach(backgroundColor);
 // preventDefault(daily);
