@@ -1,12 +1,11 @@
 import data from "./data.json";
-import ProfileInfo from "./components/ProfileInfo";
-import Card from "./components/Card";
+
 import Time from "./components/Timeframes";
-import { useState, useEffect} from "react";
+import { useState} from "react";
 import CardContainer from './components/test';
 function App() {
   const [time, setTime] = useState("daily");
-  const [hours, setHours] = useState(data)
+  const hours = data;
 
 
   return (
@@ -20,17 +19,17 @@ function App() {
             <div className="name">Jeremy Robson</div>
           </div>
           <div className="timeframes">
-            <Time focused = {time == "daily"} id="Daily" index="1" text="Daily" onClick={() => {
+            <Time focused = {time === "daily"} id="Daily" index="1" text="Daily" onClick={() => {
               
               setTime ('daily');
             
             }}/>
-            <Time focused = {time == "weekly"} id="Weekly" index="2" text="Weekly" onClick={(e) => {
+            <Time focused = {time === "weekly"} id="Weekly" index="2" text="Weekly" onClick={(e) => {
               
               setTime ('weekly');
               
             }}/>
-            <Time focused = {time == "monthly"} id="Monthly" index="3" text="Monthly" onClick={(e) => {
+            <Time focused = {time === "monthly"} id="Monthly" index="3" text="Monthly" onClick={(e) => {
               
               setTime ('monthly');
               
